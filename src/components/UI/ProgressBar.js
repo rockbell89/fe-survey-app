@@ -14,8 +14,10 @@ const StyledProgressBar = styled.span`
   left: 0;
   top: 0;
   height: 100%;
-  transition: width 0.4s ease;
-  width: ${({ percent }) => percent}%;
+  width: 100%;
+  transform: scaleX(${({ percent }) => percent / 100});
+  transform-origin: center left;
+  transition: transform 0.4s ease;
   background-color: ${color.$success};
 `;
 
